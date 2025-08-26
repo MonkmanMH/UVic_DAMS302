@@ -1,4 +1,4 @@
-DAMS302 <img src="hex_sticker/BIDA302_hex_400_sq.png" align="right" width="300"/>
+DAMS302 <img src="hex_sticker/DAMS302_hex_400_sq.png" align="right" width="300"/>
 ==========================================================
 
 
