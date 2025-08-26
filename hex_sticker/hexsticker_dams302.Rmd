@@ -1,5 +1,5 @@
 ---
-title: "BIDA302 hexsticker"
+title: "DAMS302 hexsticker"
 output:
   html_document:
     df_print: paged
@@ -110,13 +110,13 @@ p + expand_limits(x = 0, y = 0)
 
 ```{r}
 
-BIDA302_hex <- 
-  sticker(p, package="BIDA302", 
+DAMS302_hex <- 
+  sticker(p, package="DAMS302", 
           p_size=20, s_x=1, s_y=.75, s_width=1.3, s_height=1,
         h_fill=uvic_blue, h_color=uvic_yellow, p_color = uvic_yellow,
         p_family = "trebuchet")
 
-BIDA302_hex
+DAMS302_hex
 
 ```
 
@@ -181,8 +181,8 @@ p <- p +
 #    panel.border = element_rect(colour="white"),
     axis.line = element_line(colour="white"),
     axis.ticks = element_line(colour = "white"),
-    axis.title = element_text(size=16, colour = "white"),
-    axis.text = element_text(size=16, colour = "white")
+    axis.title = element_text(size=24, colour = "white", margin = margin(t = 0, r = 20, b = 0, l = 0)),
+    axis.text = element_text(size=24, colour = "white")
   ) +
   coord_equal() +
   expand_limits(x = c(0, 10), y = c(0, 10))
@@ -202,13 +202,13 @@ p
 
 ```{r}
 
-BIDA302_hex <- 
-  sticker(p, package="BIDA302", 
+DAMS302_hex <- 
+  sticker(p, package="DAMS302", 
           p_size=20, s_x=1, s_y=.75, s_width=1.3, s_height=1,
         h_fill=uvic_blue, h_color=uvic_yellow, p_color = uvic_yellow,
         p_family = "trebuchet")
 
-BIDA302_hex
+DAMS302_hex
 
 ```
 
@@ -216,13 +216,13 @@ BIDA302_hex
 
 ```{r}
 
-BIDA302_hex <- 
-  sticker(p, package="BIDA302", 
+DAMS302_hex <- 
+  sticker(p, package="DAMS302", 
           p_size=20, s_x=1, s_y=.75, s_width=1.3, s_height=1,
         h_fill=uvic_blue_dark, h_color=uvic_yellow, p_color = uvic_yellow,
         p_family = "trebuchet")
 
-BIDA302_hex
+DAMS302_hex
 
 ```
 
@@ -230,36 +230,75 @@ BIDA302_hex
 
 ```{r}
 
-BIDA302_hex <- 
-  sticker(p, package="BIDA302", 
+DAMS302_hex <- 
+  sticker(p, package="DAMS302", 
           p_size=20, s_x=1, s_y=.75, s_width=1.3, s_height=1,
         h_fill=uvic_blue_dark, h_color=uvic_yellow, p_color = uvic_yellow,
         p_family = "roboto_slab")
 
-BIDA302_hex
+DAMS302_hex
 
-ggplot2::ggsave("BIDA302_hex_screen.png", width = 2, height = 2)
+ggplot2::ggsave("DAMS302_hex_screen.png", width = 2, height = 2)
 
 
 ```
 
 
 
-
+## FINAL VERSION
 
 ```{r}
+p <- ggplot(df_xy, aes(y = data.analytics, x = coding.fundamentals)) + 
+  geom_point(colour = uvic_yellow, size = 1)
+#  geom_point(colour = uvic_blue_dark, size = 2)
 
-BIDA302_hex <- 
-  sticker(p, package="BIDA302", 
-          s_x=1, s_y=.75, s_width=1.4, s_height=1.1,
+p1 <- p
+
+p <- p +
+  theme_classic() +
+  theme_transparent() +
+  theme(
+#    panel.border = element_rect(colour="white"),
+#    plot.title = element_text(face="bold"),
+#    legend.position=c(1,0), 
+#    legend.justification=c(1,0),
+#    legend.title = element_text(size=12),
+#    legend.text = element_text(size=11),
+#    panel.border = element_rect(colour="white"),
+    axis.line = element_line(colour="white"),
+    axis.text = element_text(size=24, colour = "white"),
+    axis.ticks = element_line(colour = "white"),
+    axis.title = element_text(size=24, colour = "white")
+  ) +
+  coord_equal() +
+  expand_limits(x = c(0, 10), y = c(0, 10))
+
+p
+
+#  scale_x_continuous(breaks = c(0, 2, 4, 6, 8, 10), minor_breaks = NULL) +
+#  scale_y_continuous(breaks = c(0, 2, 4, 6, 8, 10), minor_breaks = NULL)
+
+#p <- p + 
+#  theme_transparent()
+
+#p
+
+
+DAMS302_hex <- 
+  sticker(subplot = p, package="DAMS302", 
+          s_x=0.90, s_y=.75, s_width=1.8, s_height=1.1,
         h_fill=uvic_blue_dark, h_color=uvic_yellow, h_size = 1.5,
         p_color = uvic_yellow,
-        p_size=24, 
+        p_size=30, 
         p_family = "roboto_slab")
 
-BIDA302_hex
+DAMS302_hex
 
-ggplot2::ggsave("BIDA302_hex.png", width = 2, height = 2)
+#plot(DAMS302_hex)
+
+#ggplot2::ggsave("DAMS302_hex.png", width = 3, height = 3)
+ggplot2::ggsave("DAMS302_hex_2.png", width = 2.8, height = 2.8)
+
 
 ```
 
@@ -292,9 +331,9 @@ dacf_1 <- p1 +
 dacf_1
 
 # use `dev.size()` to determine dimensions of display
-ggplot2::ggsave("BIDA302_dacf_1.png", width = 4.666667, height = 3.520833)
+ggplot2::ggsave("DAMS302_dacf_1.png", width = 4.666667, height = 3.520833)
 
-ggplot2::ggsave("BIDA302_dacf.png", width = 3.5, height = 3.5)
+ggplot2::ggsave("DAMS302_dacf.png", width = 3.5, height = 3.5)
 
 
 # add an arrow
