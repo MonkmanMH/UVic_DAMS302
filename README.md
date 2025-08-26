@@ -4,11 +4,12 @@ DAMS302 <img src="hex_sticker/BIDA302_hex_400_sq.png" align="right" width="300"/
 
 ## UVic Data Analytics Coding Fundamentals (DAMS302) course materials
 
-[Data Analytics Coding Fundamentals](https://continuingstudies.uvic.ca/business-technology-and-public-relations/courses/data-analytics-coding-fundamentals) (DAMS302) is offered by the University of Victoria's Continuing Studies, part of the [Business Intelligence and Data Analytics](https://continuingstudies.uvic.ca/business-technology-and-public-relations/series/business-intelligence-and-data-analytics) series.
-
+[Data Analytics Coding Fundamentals](https://continuingstudies.uvic.ca/business-technology-and-public-relations/courses/data-analytics-coding-fundamentals) (DAMS302) is offered by the University of Victoria's Continuing Studies, part of the [Data Analytics for Management Science](https://continuingstudies.uvic.ca/data-computing-and-technology/programs/data-analytics-for-management-science) diploma.
 
 > The important thing is that you solve the problem that you’re working on, not write the most concise and elegant code (although that’s definitely something you want to strive towards!)
 > - Grolemund & Wickham, [_R for Data Science_, 21.5 (The map functions)](https://r4ds.had.co.nz/iteration.html#the-map-functions)
+
+The course was previously part of the Business Intelligence and Data Analytics (BIDA) program and was numbered BIDA302.
 
 ## Course outline:
 
