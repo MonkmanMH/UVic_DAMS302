@@ -133,7 +133,7 @@ Leaving them in can cause problems, for instance when you try to plot them all.
 
 nlevels(gapminder$country)
 
-h_countries <- c("Belgium", "India", "Denmark", "Albania")  # see what I did there?
+h_countries <- c("Denmark", "Albania", "Mexico", "Spain")  # see what I did there?
 
 h_gap <- gapminder |>
   filter(country %in% h_countries)
@@ -198,7 +198,7 @@ As you can see with our country names above, the default arrangement is alphabet
 
 We might want to sort levels in an arbitrary way. 
 
-For example, our short country list would be more entertaining if it spelled out "BIDA".
+For example, our short country list would be more entertaining if it spelled out "DAMS".
 
 Here's the way the levels are arranged:
 
@@ -215,7 +215,7 @@ We can use `fct_relevel()` to change some or all of the levels.
 ```{r}
 
 h_gap$country |>
-  fct_relevel("Belgium", "India", "Denmark", "Albania") |> 
+  fct_relevel("Denmark", "Albania", "Mexico", "Spain") |> 
   levels()
 
 ```
@@ -430,15 +430,15 @@ A generic version of the sorting using `fct_rev()` to put them in reverse order 
 
 
 
-In this example, we will plot the four countries in our BIDA group by life expectancy.
+In this example, we will plot the four countries in our DAMS group by life expectancy.
 
 ```{r}
-h_countries <- c("Belgium", "India", "Denmark", "Albania")  # see what I did there?
+h_countries <- c("Denmark", "Albania", "Mexico", "Spain")  # see what I did there?
 
 h_gap <- gapminder |>
   filter(country %in% h_countries) |>
   mutate(country = country |> 
-  fct_relevel("Belgium", "India", "Denmark", "Albania"))  
+  fct_relevel("Denmark", "Albania", "Mexico", "Spain"))  
 
 h_gap |>
   filter(year == 2007) |>
@@ -452,7 +452,7 @@ h_gap |>
 #### Your turn
 
 
-Now it's your turn: plot the four countries in our BIDA group by life expectancy.
+Now it's your turn: plot the four countries in our DAMS group by life expectancy.
 
 <details>
 
@@ -485,7 +485,7 @@ h_gap |>
 ## Exercise - factors and plotting
 
 
-[BIDA302: Factors and Plotting](https://monkmanmh.shinyapps.io/BIDA_3_3_factor_plot/#section-factors)
+[Factors and Plotting](https://monkmanmh.shinyapps.io/BIDA_3_3_factor_plot/#section-factors)
 
 * an introduction to factor variables in the context of making plots
 

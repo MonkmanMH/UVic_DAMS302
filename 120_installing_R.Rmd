@@ -132,7 +132,7 @@ The reference page for the {here} package: https://here.r-lib.org/
 
 ### Package: `{tidyverse}` 
 
-For BIDA302, we will be working extensively with the packages that are part of the tidyverse. To make our lives easier, the core tidyverse packages are bundled together and can be installed in one step, with a package called `{tidyverse}`
+For this course, we will be working extensively with the packages that are part of the tidyverse. To make our lives easier, the core tidyverse packages are bundled together and can be installed in one step, with a package called `{tidyverse}`
 
 
 [tidyverse: Easily Install and Load the 'Tidyverse'](https://cran.r-project.org/web/packages/tidyverse/index.html)

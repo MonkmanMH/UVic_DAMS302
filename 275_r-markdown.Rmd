@@ -114,12 +114,12 @@ You could also type the three back ticks, the curly braces, the letter R, and th
 
 2.  Name the chunk so that you can navigate to it later.
 
-In the new chunk you have just created, type the function `say()` (which is from the {cowsay} package), inside the parentheses put a short quote (for example, "I like BIDA302"), and then run the chunk...
+In the new chunk you have just created, type the function `say()` (which is from the {cowsay} package), inside the parentheses put a short quote (for example, "I like DAMS302"), and then run the chunk...
 
 ```{r}
 # solution
 
-say("I like BIDA302")
+say("I like DAMS302")
 
 ```
 

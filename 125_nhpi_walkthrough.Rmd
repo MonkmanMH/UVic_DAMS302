@@ -75,12 +75,12 @@ get_yoy_stats <- function(df) {
 
 We then create a chart theme that will also be called later. This theme will be applied to all of our charts, and ensures that every one of our charts have exactly the same formatting. Like functions, this streamlines our code and helps reduce the chance of error. 
 
-For this chart theme, more than 10 lines of code gets reduced to a simple, memorable name: `bida_chart_theme`.
+For this chart theme, more than 10 lines of code gets reduced to a simple, memorable name: `dams_chart_theme`.
 
 
-```{r bida_chart_theme}
+```{r dams_chart_theme}
 
-bida_chart_theme <-
+dams_chart_theme <-
   theme_bw() +
   theme(
     panel.border = element_rect(colour="white"),
@@ -463,16 +463,17 @@ dataplot2 <- dataplot +
                       breaks=c("Canada", "British Columbia"),
                       labels=c("Canada", "British Columbia"), 
                       values=c("#325A80", "#CCB550")) +
-  bida_chart_theme
+  # add the DAMS chart theme elements
+  dams_chart_theme
 
 ```
 
 
-Just a reminder: all of the code below is what's in the `bida_chart_theme`--the last line in the code chunk above. 
+Just a reminder: all of the code below is what's in the `dams_chart_theme`—the last line in the code chunk above. 
 
 If we were to make more than one copy of the plot, we would have to repeat this every time. And if we made more than one copy of the plot, we would have to make the same change in every place. 
 
-By assigning all of this code to the object `bida_chart_theme`, we can make a change in one place, and it will carry through all of the times we need it.
+By assigning all of this code to the object `dams_chart_theme`, we can make a change in one place, and it will carry through all of the times we need it.
 
 
 ```{r}
@@ -555,7 +556,7 @@ NHPI_Vancouver_plot <-
                       breaks=c("House only", "Land only"),
                       labels=c("House only", "Land only"), 
                       values=c("#325A80", "#CCB550")) +
-  bida_chart_theme +
+  dams_chart_theme +
   # set chart titles and labels
   labs(title = NHPI_title,
        subtitle = NHPI_subtitle,
