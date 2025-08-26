@@ -1,4 +1,4 @@
-# (PART) Week 2 {-} 
+# (PART) UNIT 2 {-} 
 
 ```{r setup_201, echo = FALSE}
 library(knitr)

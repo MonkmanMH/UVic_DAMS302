@@ -1,6 +1,6 @@
 --- 
 title: "Data Analytics Coding Fundamentals"
-subtitle: "UVic BIDA302: Course Book"
+subtitle: "UVic DAMS302: Course Book"
 author: "Martin Monkman"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -11,10 +11,10 @@ biblio-style: apalike
 link-citations: yes
 links-as-notes: true
 colorlinks: true
-cover-image: "BIDA302_hex_400_sq.png"
+cover-image: "DAMS302_hex_400_sq.png"
 url: "https://bookdown.org/martin_monkman/DataAnalyticsCodingFundamentals/"
-github-repo: "MonkmanMH/UVic_BIDA302"
-description: "The course book for BIDA302"
+github-repo: "MonkmanMH/UVic_DAMS302"
+description: "The course book for DAMS302"
 ---
 
 
@@ -33,11 +33,10 @@ library(knitr)
 opts_chunk$set(message = FALSE, warning = FALSE, cache = FALSE)
 options(width = 100, dplyr.width = 100)
 
-#source("packages_bida302.R")
 
 # package-a-rama
 #
-# all of the packages for all the modules of BIDA302
+# all of the packages for all the modules of DAMS302
 
 # tidyverse etc
 library(tidyverse)
@@ -59,14 +58,16 @@ library(palmerpenguins)
 ```
 
 
-# Data Analytics Coding Fundamentals (BIDA302) {-}
+# Data Analytics Coding Fundamentals (DAMS302) {-}
 
-<img src="BIDA302_hex_400_sq.png" width="350" height="350" alt="BIDA302 hex" />
+<img src="DAMS302_hex_400_sq.png" width="350" height="350" alt="DAMS302 hex" />
 
 _Latest update: `r Sys.Date()`_
 
 
-This book is based on the lessons for BIDA302, "Data Analytics Coding Fundamentals", offered at the University of Victoria's [Continuing Studies Department](https://continuingstudies.uvic.ca/).
+This book is based on the lessons for DAMS302, "Data Analytics Coding Fundamentals", offered at the University of Victoria's [Continuing Studies Department](https://continuingstudies.uvic.ca/).
+
+Note that the course was previously part of the Business Intelligence & Data Analytics series, numbered BIDA302.
 
 
 ## Course Outline {-}
@@ -81,7 +82,7 @@ Note that the emphasis of the course will be learning R. The concepts learned in
 
 #### Learning objectives {-}
 
-BIDA302 learning objectives:
+DAMS302 learning objectives:
 
 >By the end of this course, you should be able to:
 >
@@ -250,7 +251,7 @@ One of the most important developers of R packages (and co-author of our textboo
 
 
 
-### Some advice from people who took BIDA302 before... {-}
+### Some advice from people who took DAMS302/BIDA302 before... {-}
 
 People who have previously taken this course were asked “Imagine that
 time travel is possible…You have just been transported back four weeks
@@ -370,7 +371,7 @@ We are accidental data scientists!
 
 **Acknowledgements**
 
-The authors would like to acknowledge everyone who has contributed to the books, articles, blog posts, and R packages cited within. And of course, all of the participants in BIDA302 who have asked great questions and helped me get better at explaining the why and what of data analysis using R.
+The authors would like to acknowledge everyone who has contributed to the books, articles, blog posts, and R packages cited within. And of course, all of the participants in DAMS302 who have asked great questions and helped us get better at explaining the why and what of data analysis using R.
 
 
 **License**
@@ -380,7 +381,7 @@ The authors would like to acknowledge everyone who has contributed to the books,
 
 **Source code**
 
-The source code for this ebook can be found at this github repository: https://github.com/MonkmanMH/UVic_BIDA302 
+The source code for this ebook can be found at this github repository: https://github.com/MonkmanMH/UVic_DAMS302 
 
 This book is written in **Markdown**, using the [**bookdown**](https://bookdown.org/yihui/bookdown/) package, and published to the web at [bookdown.org](https://bookdown.org/).
 
