@@ -1,10 +1,10 @@
-BIDA302 <img src="hex_sticker/BIDA302_hex_400_sq.png" align="right" width="300"/>
+DAMS302 <img src="hex_sticker/BIDA302_hex_400_sq.png" align="right" width="300"/>
 ==========================================================
 
 
-## UVic Data Analytics Coding Fundamentals (BIDA302) course materials
+## UVic Data Analytics Coding Fundamentals (DAMS302) course materials
 
-[Data Analytics Coding Fundamentals](https://continuingstudies.uvic.ca/business-technology-and-public-relations/courses/data-analytics-coding-fundamentals) (BIDA302) is offered by the University of Victoria's Continuing Studies, part of the [Business Intelligence and Data Analytics](https://continuingstudies.uvic.ca/business-technology-and-public-relations/series/business-intelligence-and-data-analytics) series.
+[Data Analytics Coding Fundamentals](https://continuingstudies.uvic.ca/business-technology-and-public-relations/courses/data-analytics-coding-fundamentals) (DAMS302) is offered by the University of Victoria's Continuing Studies, part of the [Business Intelligence and Data Analytics](https://continuingstudies.uvic.ca/business-technology-and-public-relations/series/business-intelligence-and-data-analytics) series.
 
 
 > The important thing is that you solve the problem that you’re working on, not write the most concise and elegant code (although that’s definitely something you want to strive towards!)
@@ -12,7 +12,7 @@ BIDA302 <img src="hex_sticker/BIDA302_hex_400_sq.png" align="right" width="300"/
 
 ## Course outline:
 
-[BIDA302, most recent offering](https://github.com/MonkmanMH/UVic_BIDA302/blob/master/course_outline/00_course-outline.md) -- draft, subject to change
+To be added
 
 ## Solutions to hands-on exercises
 
@@ -20,7 +20,7 @@ Solutions to the in-class hands-on exercises can be found as online interactive 
 
 ## Capstone projects
 
-The [capstone projects for BIDA302 get their own repo](https://github.com/MonkmanMH/UVic_BIDA302_capstone)
+The [capstone projects for DAMS302 get their own repo](https://github.com/MonkmanMH/UVic_BIDA302_capstone)
 
 ## Versions:
 
