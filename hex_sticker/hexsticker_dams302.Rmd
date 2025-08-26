@@ -116,7 +116,7 @@ DAMS302_hex <-
         h_fill=uvic_blue, h_color=uvic_yellow, p_color = uvic_yellow,
         p_family = "trebuchet")
 
-DAMS302_hex
+#DAMS302_hex
 
 ```
 
@@ -247,6 +247,12 @@ ggplot2::ggsave("DAMS302_hex_screen.png", width = 2, height = 2)
 
 ## FINAL VERSION
 
+- note: added space between "DAMS" and "302"  with unicode U2006 (six-per-em space)
+
+- https://en.wikipedia.org/wiki/Whitespace_character
+
+
+
 ```{r}
 p <- ggplot(df_xy, aes(y = data.analytics, x = coding.fundamentals)) + 
   geom_point(colour = uvic_yellow, size = 1)
@@ -268,7 +274,8 @@ p <- p +
     axis.line = element_line(colour="white"),
     axis.text = element_text(size=24, colour = "white"),
     axis.ticks = element_line(colour = "white"),
-    axis.title = element_text(size=24, colour = "white")
+    axis.title.x = element_text(size=24, colour = "white", vjust = +3),
+    axis.title.y = element_text(size=24, colour = "white", vjust = -1.5)
   ) +
   coord_equal() +
   expand_limits(x = c(0, 10), y = c(0, 10))
@@ -283,10 +290,12 @@ p
 
 #p
 
+package_name <- glue::glue("DAMS", "\U2006", "302")
+package_name
 
 DAMS302_hex <- 
-  sticker(subplot = p, package="DAMS302", 
-          s_x=0.90, s_y=.75, s_width=1.8, s_height=1.1,
+  sticker(subplot = p, package=package_name, 
+          s_x=0.90, s_y=.75, s_width=1.4, s_height=1.1,
         h_fill=uvic_blue_dark, h_color=uvic_yellow, h_size = 1.5,
         p_color = uvic_yellow,
         p_size=30, 
@@ -297,7 +306,7 @@ DAMS302_hex
 #plot(DAMS302_hex)
 
 #ggplot2::ggsave("DAMS302_hex.png", width = 3, height = 3)
-ggplot2::ggsave("DAMS302_hex_2.png", width = 2.8, height = 2.8)
+ggplot2::ggsave("DAMS302_hex.png", width = 2.8, height = 2.8)
 
 
 ```
