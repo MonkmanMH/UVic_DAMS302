@@ -36,7 +36,7 @@ To do this, you will have the end already defined: a summary table and/or a plot
 * In the defined projects, you are to replicate a summary table and plot—you will have all the necessary data, and the end-goal. It's up to you to use your data analytics coding skills to create that summary table, plot.
 
 
-The project will be introduced in Week 4.
+The project will be introduced in Unit 4.
 
 Some projects will be available for you to choose, but you may also bring your own data. Talk to the instructor to ensure that your project goals are suitable; past experience has indicated that "projects from home" are likely to be more than is required for this course! We can work to ensure that the scope is feasible for the time available, and will set you up for further development if you want to continue.
 
@@ -77,7 +77,7 @@ Things to think about adding are:
 
 * **What**: analysis of what the results show ("This chart shows a bigger increase in the first thing than the second thing")
 
-For an example of what your documentation might look like, refer to the chapter from Week 1, [An example of a data analytics project](#walkthrough).
+For an example of what your documentation might look like, refer to the chapter from Unit 1, [An example of a data analytics project](#walkthrough).
 
 
 ## Capstone GitHub page

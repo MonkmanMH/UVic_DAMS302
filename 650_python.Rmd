@@ -31,7 +31,7 @@ library(reticulate)
 
 ![_the data science process_](static/img/data-science.png)
 
-We have spent 5.5 weeks talking about this process^[From [@Wickham_Grolemund2016]] with **R**...but it's not the only tool set available.
+Since the beginning of this course, we have been talking about this process^[From [@Wickham_Grolemund2016]] with **R**...but it's not the only tool set available.
 
 One other data science programming environment that is popular is the programming language Python^[[python.org](https://www.python.org/).]
 

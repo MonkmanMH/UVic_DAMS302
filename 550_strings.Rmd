@@ -544,7 +544,7 @@ penguins |>
 
 ### Removing characters {#strings-removing}
 
-In the Week 3 assignment, you probably noticed that some of the community names have a pair of asterisks at the end, indicating that the community includes more than one municipality. For example, "North Vancouver" includes both the City of North Vancouver and the District of North Vancouver (two distinct towns, with the same name...) 
+In the Unit 3 assignment, you probably noticed that some of the community names have a pair of asterisks at the end, indicating that the community includes more than one municipality. For example, "North Vancouver" includes both the City of North Vancouver and the District of North Vancouver (two distinct towns, with the same name...) 
 
 Here's a long form of the "Purpose Built Rental" sheet ("pbr" for short) from that Excel file:
 

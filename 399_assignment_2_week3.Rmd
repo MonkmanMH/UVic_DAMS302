@@ -5,7 +5,7 @@ https://creativecommons.org/licenses/by/4.0/  -->
 
 
 
-# Assignment 2 - week 3 - exploratory data analysis {#assignment3} {-}
+# Assignment 2 - Unit 3 - exploratory data analysis {#assignment3} {-}
 
 
 ## Setup {-}

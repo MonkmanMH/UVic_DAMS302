@@ -254,7 +254,7 @@ One of the most important developers of R packages (and co-author of our textboo
 ### Some advice from people who took DAMS302/BIDA302 before... {-}
 
 People who have previously taken this course were asked “Imagine that
-time travel is possible…You have just been transported back four weeks
+time travel is possible…You have just been transported back in time
 to the day before this course started. What is one thing you would tell
 your past self about this course?” Here are some of their answers:
 
@@ -264,8 +264,7 @@ your past self about this course?” Here are some of their answers:
 
   - You’ll get better soon.
 
-  - Need to spend more time studying since the class is 6 hours a week,
-    1-2 hours a week outside class won’t be enough for a dinosaur like
+  - Need to spend more time studying since 1-2 hours a week outside class won’t be enough for a dinosaur like
     me.
 
   - To do the homework on Saturday* after class so you haven’t
@@ -300,7 +299,7 @@ your past self about this course?” Here are some of their answers:
         for Data Science textbook as you read the relevant chapters.
         Practice is the best way to learn programming.
 
-  - If I could travel 4 weeks in the past, I would advise myself 
+  - I would advise myself 
     that is no necessary to search Google for functions that we 
     haven't seen in class yet. All assignments can be solved with 
     the information seen in class, it is only necessary to review 
@@ -313,55 +312,8 @@ your past self about this course?” Here are some of their answers:
 
 ## Structure {-}
 
-The book's layout is in 6 sections, each corresponding to the 6 weeks of the course. Each week has multiple chapters, corresponding with the topics covered and (when appropriate) the assignment for that week.
+The course book's layout is in 6 sections, each corresponding to the 6 units of the course. Each unit has multiple chapters, corresponding with the topics covered and (when appropriate) the assignment for that unit.
 
-
-
-## A bit about your instructors {-}
-
-
-**Martin**
-
-* University: UVic Geography B.Sc. & M.A.
-
-* Day job: 
-
-  - BC Stats: 1993 to 2022 (with 5 year gap when I worked elsewhere in the B.C. public service)
-  
-  - now Senior Manager, Consulting at MNP
-
-* I have been writing code since 1979
-
-  - to do data analysis since 1993
-  
-  - using R since 2012
-
-* My coding started writing [FORTRAN](https://en.wikipedia.org/wiki/Fortran) on [punch cards](https://en.wikipedia.org/wiki/Punched_card)
-
-![_computer punch card_](static/img/ibm-80-column-punched-card1.jpg)
-
-
-**Julie**
-
-* University: UVic Psychology B.Sc.
-
-* Day job: Data Scientist at BC Stats, 2001 to present
-
-* I have been playing with data since 1997:
-
-  - started using SPSS and MiniTab to do data analysis
-  
-  - expanded data analysis tools with Excel
-  
-  - using R since 2016
-
-
-
-So wait...we each have some substantive expertise, combined with some statistics knowledge, and we have been using our coding skills to be more efficient and effective with our work...
-
-We are accidental data scientists!
-
-![I am not trained for this...and yet](static/img/I-am-not-trained-for-this_laptop_600.jpg)
 
 
 
