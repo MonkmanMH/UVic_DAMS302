@@ -6,9 +6,9 @@
 # assorted output and data files
 # css_files/
 
-*.pdf
+#*.pdf
 #*.png
-*.jpg
+#*.jpg
 
 #*.csv
 #*.xls*

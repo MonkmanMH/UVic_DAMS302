@@ -111,11 +111,11 @@ To install a package:
 * click on the Packages Pane and then Install.  
 * Install from: Repository (CRAN)  
 * Packages: Type in the package name(s)  
-* Install to Library: C:/RPackages/library [Default]  
+* Install to Library: {folder location} [Default]  
 * Install dependencies: checked  
 * click "Install"
 
-Or, to install the package called {here}, use:
+Or, we can use the function `install.packages()`. For example, to install the package called {here}, we could enter the following in our console:
 
 ```
 
@@ -123,7 +123,7 @@ install.packages("here")
 
 ```
 
-You can see that a package is installed by searching it in Packages pane search, or scrolling down.
+You can check to see if a package is installed by searching it in Packages pane search, or scrolling down.
 ![](Images\02_packages_search.png)
 
 
@@ -176,9 +176,6 @@ Updating packages is very easy. Simply click on the Packages pane, then Update. 
 
 ![](images\02_packages_update.png)
 
-If the following warning pops up, choose Yes:  
-
-![](images\02_install_package_warning.png)
 
 Alternatively, if you know which package(s) you want to update, use the `install.packages()` function.
 
