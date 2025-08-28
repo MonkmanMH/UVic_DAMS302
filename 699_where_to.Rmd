@@ -250,7 +250,7 @@ The R ecosystem is continuously changing. The core of R changes slowly and stead
 But how can you keep up with all of this? The answer is "you can't". But the most effective strategy is to become part of the R user community. Connecting to the R user community will help you learn more, and one day, you'll be one of the people contributing.
 
 
-1. The mastodon hashtag #rstats provides a steady stream of questions and answers, links to new packages, and other news. You can find Martin at [mastodon.social/@monkmanmh](https://mastodon.social/@monkmanmh).
+1. The hashtag #rstats provides a steady stream of questions and answers, links to new packages, and other news on a variety of social media platforms, including [Bluesky](https://bsky.app/search?q=%23rstats). 
 
 2. Conferences, meet-ups, and other events (listed above). Most conferences are posting their proceedings, including videos of talks. Some of these will be about new packages and techniques, or novel applications of existing techniques.
 

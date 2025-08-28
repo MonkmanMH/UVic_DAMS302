@@ -255,24 +255,24 @@ In R, one way to create one type of list (technically, an atomic vector) of numb
 
 
 ```{r D1-setup}
-# setup chunk with bida_numbers
-bida_numbers <- c(301, 302, 404, 405, 406)
+# setup chunk with dams_numbers
+dams_numbers <- c(301, 302, 404, 405, 406)
 
 ```
 
 ```{r D1-1, exercise=TRUE}
 
-bida_numbers <- c(301, 302, 404, 405, 406)
+dams_numbers <- c(301, 302, 404, 405, 406)
 
-bida_numbers
+dams_numbers
 
 ```
 
-We can then apply a function to the object `bida_numbers`. For example, to calculate the mean, we use the function `mean()`:
+We can then apply a function to the object `dams_numbers`. For example, to calculate the mean, we use the function `mean()`:
 
 ```{r D1-2, exercise=TRUE, exercise.eval=FALSE, exercise.setup = "D1-setup"}
 
-mean(bida_numbers)
+mean(dams_numbers)
 
 ```
 
@@ -303,18 +303,18 @@ Because R is a statistical/data science programming language, these and many mor
 
 Write the script to calculate:
 
-* the minimum value of `bida_numbers`
+* the minimum value of `dams_numbers`
 
-* how many numbers there are in `bida_numbers`
+* how many numbers there are in `dams_numbers`
 
 
 
 ```{r D1-3_yt-solution}
 # answer
 
-min(bida_numbers)
+min(dams_numbers)
 
-length(bida_numbers)
+length(dams_numbers)
 
 ```
 
@@ -325,7 +325,7 @@ length(bida_numbers)
 The `summary()` function is handy for getting a quick snapshot of a variable.
 
 
-Write the script to generate the summary of `bida_numbers`.
+Write the script to generate the summary of `dams_numbers`.
 
 
 
@@ -333,7 +333,7 @@ Write the script to generate the summary of `bida_numbers`.
 ```{r D2-1_yt-solution, exercise.setup = "D1-setup"}
 # answer
 
-summary(bida_numbers)
+summary(dams_numbers)
 
 ```
 

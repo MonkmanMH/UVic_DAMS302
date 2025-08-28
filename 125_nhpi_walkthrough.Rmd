@@ -458,7 +458,7 @@ And with even more formatting it's starting to look like something we could publ
 ```{r}
 dataplot2 <- dataplot +
   scale_x_date(date_breaks = "2 years", labels = year) +
-  scale_y_continuous(labels = comma, limits = c(80, 125)) +
+  scale_y_continuous(labels = comma, limits = c(80, NA)) +
   scale_colour_manual(name=NULL,
                       breaks=c("Canada", "British Columbia"),
                       labels=c("Canada", "British Columbia"), 
@@ -551,7 +551,7 @@ NHPI_Vancouver_plot <-
   geom_line(size=1.5) +
   #
   scale_x_date(date_breaks = "2 years", labels = year) +
-  scale_y_continuous(labels = comma, limits = c(80, 125)) +
+  scale_y_continuous(labels = comma, limits = c(80, NA)) +
   scale_colour_manual(name=NULL,
                       breaks=c("House only", "Land only"),
                       labels=c("House only", "Land only"), 

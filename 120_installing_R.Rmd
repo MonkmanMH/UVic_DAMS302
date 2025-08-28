@@ -85,7 +85,7 @@ Danielle Navarro, [_running R on your own computer_](https://youtube.com/playlis
 
 ## Step 3 - Install first packages
 
-Packages are collections of R functions, data, and compiled code in a well-defined format. The directory where packages are stored is called the library. R comes with a standard set of packages (~30) such as {base}, {datasets}[^1], {graphics}, {stats}, {utils} and many more. Hundreds may be downloaded and installed. Once installed, they have to be loaded into the session to be used.
+Packages are collections of R functions, data, and compiled code in a well-defined format. The directory where packages are stored is called the library. R comes with a standard set of packages (~30) such as {base}, {datasets}[^1], {graphics}, {stats}, {utils} and many more. Literally thousands more packages are available to be downloaded and installed. Once installed on your computer, they have to be loaded into the R session so that the functions in that package can be used.
 
 [^1]:Note that the datasets package has over 100 datasets to use (e.g., {mtcars} and {iris}).
 
@@ -100,9 +100,7 @@ library()
 
 ### Installing new packages
 
-There are hundreds more R packages than the standard packages that install with R.
-
-Some of the packages we will use in this course are `tidyverse` (a special package of consistent packages that work together), `here` (simpler way to find files), `lubridate` (dealing with dates more easily), `readxl` (to read data from an Excel file), `janitor` (data frame cleaning and exploring), etc.
+Beyond the base packages that install with R, some of the packages we will use in this course include `tidyverse` (a special package of consistent packages that work together), `here` (simpler way to find files), `lubridate` (dealing with dates more easily), `readxl` (to read data from an Excel file), and `janitor` (data frame cleaning and exploring).
 
 ![](Images\02_install_package_how.png)
 
@@ -137,7 +135,7 @@ For this course, we will be working extensively with the packages that are part 
 
 [tidyverse: Easily Install and Load the 'Tidyverse'](https://cran.r-project.org/web/packages/tidyverse/index.html)
 
-* many of the packages we will, including 
+* With tools in the tidyverse, we will be: 
 
   - wrangling with {dplyr} & {tidyr}
 
