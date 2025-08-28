@@ -54,7 +54,7 @@ Here's a simple example:
 
 ```{r}
 
-glue('BIDA', '302')
+glue('DAMS', '302')
 
 ```
 
@@ -63,7 +63,7 @@ We can also paste together variables, by putting the name inside curly braces `{
 
 ```{r}
 
-course <- "BIDA"
+course <- "DAMS"
 course_number <- 405
 
 glue({course}, {course_number})

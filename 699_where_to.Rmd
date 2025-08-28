@@ -259,17 +259,17 @@ But how can you keep up with all of this? The answer is "you can't". But the mos
 
 ## Other courses & training
 
-### BIDA at UVic
+### DAMS at UVic
 
-Of course, [the other courses in the BIDA series at UVic](https://continuingstudies.uvic.ca/business-technology-and-public-relations/programs/business-intelligence-and-data-analytics)!
+Of course, [the other core courses in the Data Analytics for Management Science diploma at UVic](https://continuingstudies.uvic.ca/data-computing-and-technology/programs/data-analytics-for-management-science)!
 
-* BIDA 301 Business Intelligence and Data Analytics Fundamentals
+* DAMS 301 Business Intelligence and Data Analytics Fundamentals
 
-* BIDA 404 Data Visualization and Reporting
+* DAMS 404 Data Visualization and Reporting
 
-* BIDA 405 Data Analytics Provisioning, Importing, Extracting and Manipulation 
+* DAMS 405 Data Analytics Provisioning, Importing, Extracting and Manipulation 
 
-* BIDA 406 Predictive Data Analytics and Modelling
+* DAMS 406 Predictive Data Analytics and Modelling
 
 
 ### Other sources
