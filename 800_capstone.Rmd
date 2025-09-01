@@ -36,9 +36,13 @@ To do this, you will have the end already defined: a summary table and/or a plot
 * In the defined projects, you are to replicate a summary table and plot—you will have all the necessary data, and the end-goal. It's up to you to use your data analytics coding skills to create that summary table, plot.
 
 
-The project will be introduced in Unit 4.
+The capstone project will be introduced in Unit 4.
 
-Some projects will be available for you to choose, but you may also bring your own data. Talk to the instructor to ensure that your project goals are suitable; past experience has indicated that "projects from home" are likely to be more than is required for this course! We can work to ensure that the scope is feasible for the time available, and will set you up for further development if you want to continue.
+
+
+Some projects will be available for you to choose, and are described in the chapters that follow.
+
+You may also bring your own data. Talk to the instructor to ensure that your project goals are suitable; past experience has indicated that "projects from home" are likely to be more than is required for this course! We can work to ensure that the scope is feasible for the time available, and will set you up for further development (beyond what is required for the course) if you want to continue.
 
 
 ## Submission
@@ -80,9 +84,5 @@ Things to think about adding are:
 For an example of what your documentation might look like, refer to the chapter from Unit 1, [An example of a data analytics project](#walkthrough).
 
 
-## Capstone GitHub page
 
-The chapters that follow have a list of the most popular capstone projects. You can find a longer list of the capstone projects, including some that are still in develoment, at this website:
-
-https://github.com/MonkmanMH/UVic_BIDA302_capstone
-
+-30-

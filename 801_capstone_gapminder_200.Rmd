@@ -49,6 +49,19 @@ In addition, there is an Excel file that you'll need to use to get the region (c
 
 ## References {#gapminder200-ref}
 
+## Other gapminder data visualizations
+
+Hans Rosling has used the same visualization structure to show other variables, and how those have also changed over time. In this presentation, he shows how the population of European countries has aged since 1961, compared to the fertility rate of those countries.
+
+* [Professor Hans Rosling on Ageing Europe](youtube.com/watch?v=QHCt6PmSs0k&feature=youtu.be)
+
+* An additional description of this presentation can be fount at Presentation Zen, [Hans Rosling: the zen master of presenting data](https://www.presentationzen.com/presentationzen/2010/07/hans-rosling-tips-on-presenting-data.html), 2010-07-11
+
+This image captures the 1961 version of the plot:
+![Hans Rosling, aging Europe 1961](static/img_capstone/Hans_Rosling_aging_europe_small.png)
+
+
+
 ### Animation of plots 
 
 Part of what makes Hans Rosling's presentations so compelling is the animation of the data visualization. Here are some links to resources for you to create an animated plot in R, using the package {gganimate}. 
