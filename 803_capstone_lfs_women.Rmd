@@ -18,7 +18,7 @@ options(width = 100, dplyr.width = 100)
 ## Introduction {#lfs-women-intro}
 
 
-On 2016-11-18, [Dr. Tammy Schirle](https://tammyschirle.org/) posted [a series of tweets](https://twitter.com/tammyschirle/status/799616596750831616) via her twitter account, showing the proportion of Canadian women with young children, employed and at work, from 1976-2015.
+On 2016-11-18, [Dr. Tammy Schirle](https://tammyschirle.org/) posted a series of tweets (now deleted) via her twitter account, showing the proportion of Canadian women with young children, employed and at work, from 1976-2015.
 
 
 ![Proportion of Canadian women with young children employed and at work](static/img_capstone/schirle_lfs_women_age_of_child.png)
