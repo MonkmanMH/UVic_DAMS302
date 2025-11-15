@@ -7,6 +7,11 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(MASS)
+library(mvtnorm)
+
 ```
 
 ## Data creation
@@ -389,7 +394,7 @@ data2c <- data2 |>
 data2c |> 
 ggplot(aes(X, Y_value)) +
   geom_point() +
-  geom_smooth(method = "lm") +
+#  geom_smooth(method = "lm") +
   facet_wrap(~Y_vector) +
   labs(
     y = "Y"
@@ -398,4 +403,29 @@ ggplot(aes(X, Y_value)) +
 ggsave("correlation_facets.jpg")
 ```
 
+
+```{r}
+data2d <- data2 |> 
+  mutate(
+    "R^2 = 0.81 (negative)" = 100 - (V2  - 100),
+    "R^2 = 0.25 (negative)" = 100 - (V3  - 100)
+  ) |> 
+#  rename("X" = V1, "R=-0.8" = V2, "R=-0.4" = V3, "R=0.0" = V4) |> 
+  rename("X" = V1, "R^2 = 0.81" = V2, "R^2 = 0.25" = V3, "R^2 = 0.0" = V4) |> 
+  pivot_longer(-X, names_to = "Y_vector", values_to = "Y_value") |> 
+  mutate(Y_vector = as_factor(Y_vector))
+
+
+data2d |> 
+ggplot(aes(X, Y_value)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~Y_vector) +
+  labs(
+    y = "Y"
+  )
+
+ggsave("regression_facets.jpg")
+
+```
 

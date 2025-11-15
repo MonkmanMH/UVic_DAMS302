@@ -41,6 +41,8 @@ Please refer to
 
 For information on the statistics of regression models, see the following:
 
+* James P. Curley & Tyler M. Milewski, [PSY317L Guidebook, chapters 12 & 13](https://jalapic.github.io/introstats/correlation.html) has a good explanation of correlation and linear regression, including R code
+
 * Danielle Navarro, [_Learning statistics with R_, Chapter 15 Linear regression](https://learningstatisticswithr.com/book/regression.html) [@Navarro_learning_statistics]
 
 * Chester Ismay & Albert Y. Kim, [_Modern Dive: Statistical Inference via Data Science_, Chapter 5 Basic Regression](https://moderndive.com/5-regression.html) [@Ismay_Kim_2018]
@@ -54,14 +56,45 @@ can be found at [Bivariate Correlation Simulation and Bivariate Scatter Plotting
 
 When we talk about a "model" in the context of data analysis, we usually mean that we are summarizing the relationship between two or more variables. The question we are asking is "What's the pattern in the data?"
 
-In this example, we will be using linear regression to predict one value based on one or more values. 
+One real world example comes from forecasting energy use. As it gets colder outside, we use more energy to heat our homes—it is in the interest of the energy company (such as the folks responsible for BC Hydro's electricity generation) to predict or forecast energy consumption based on temperature. And because there are other factors that drive energy use, we could create a more complex model; for example, we could see if adding relative humidity along with temperature gives us a better estimate of energy consumption.
 
-As it gets colder outside, we use more energy to heat our homes—can we predict energy consumption based on temperature? And in a more complex model, we could see if temperature plus relative humidity is a better predictor.
+When we create a regression model, the three outputs that we are most interested in are:
 
+
+| Model Output  | What It Measures  | Explanation |
+|---------------|-------------------|-------------|
+| R-squared  (coefficient of determination) | The strength of the relationship between the variables | How well does knowing X allow us to predict the value of Y? |
+| Coefficients  | The equation that defines the _line of best fit_ | The equation that allows us to calculate our predicted value of Y, given a known value of X |
+| P value | The statistical significance | This shows whether the degree of association found in the model is likely to be a matter of chance |
+
+
+### R and R-squared
+
+Before we get to the R-squared value, it's helpful to understand the correlation coefficient, R.
+This is the measure of the strength and direction of a linear relationship between the two variables. It varies from 1 (a perfect positive relationship) to -1 (a perfect negative relationship).
+
+In the examples in the plot below, the mean value of both X and Y is 100. The R score is shown in the title of each individual subplot.
+
+We can see that in the plot where the R value is 0.9 (top left), the value of Y increases quite closely with the increase in X...the points are scattered closely, and it's easy to visualize a line running through them to show the trend. In the R value of -0.9 (bottom left), there's the same degree of scatter of the points but it's a negative relationship...as X increases, Y _decreases_. 
+
+At the opposite side (top right), we have an R value of 0. As X increases, there is no pattern to Y. 
+
+![correlation examples](correlation_facets.jpg){width=100%} 
+
+The R-squared value is (you guessed it) the R value multiplied by itself (squared). As a result, the value is between 1 and 0. The R-squared tells us the amount of variation in Y that is explained by X. An R-squared value of 1 tells us that 100% of the variation in Y can be explained by X.
+
+In the first of our examples, the R of both 0.9 and -0.9 become an R-squared (or "R^2") of 0.81. This tells us that 81% of the variation in the value of Y can be explained by the value of X. In this case, knowing X will allows to be quite accurate with our prediction of Y. For example, if we know X is 98, the model is going to give us an estimate of Y that is somewhere close to 98.
+
+At the opposite end of the scale, the R-squared value of 0 tells us that none of the variation in Y can be explained by X. If we are trying to predict Y, knowing X is no help at all. In this case, no matter what value of X we have, our best estimate of Y remains the mean value of 100.
+
+
+![regression examples](regression_facets.jpg){width=100%}
+
+These plots also show the _line of best fit_ in blue. This line is discussed below.
 
 ## A simple example
 
-This pair of plots shows how a simple linear model works: first we have the X-Y scatter plot.
+The pair of plots below shows how a simple linear model works: first we have the X-Y scatter plot.
 
 In this example, the trend is fairly clear: as the value of "x" increases, so does "y". We say that "x" is the independent variable, and "y" is the dependent variable. In a predictive model, we are estimating (or predicting) a value of "y" based on a known value of "x". In the earlier home heating example, energy consumption _depends_ on temperature; we are trying to predict energy consumption based on the temperature outside. 
 
@@ -80,6 +113,19 @@ sim1 <- modelr::sim1 |>
 ggplot(sim1, aes(x = x, y = y)) +
   geom_point()
 ```
+
+
+
+We can calculate the R value (the correlation coefficient) of the variables in the sim1 data using the function `cor()`:
+
+```{r correlation_sim1}
+
+cor(sim1$x, sim1$y)
+
+```
+
+### Line of best fit 
+
 
 
 Then we can add the line of best fit that shows the trend, using the `geom_smooth()` function, where `method = lm`. This line shows the predicted values of "y", based on the value of "x".
@@ -126,6 +172,8 @@ mod_sim1
 
 ```
 
+Creating the linear model calculates the coefficients that are used to describe the _line of best fit_.
+
 The regression equation is the same as an equation for defining a line in geometry:
 
 $y = b_{0} + b_{1}x_{1} + e$
@@ -163,7 +211,17 @@ If `x` = 2.5, then `y` = `r round(mod_sim1$coefficients[1], 2)` + (`r round(mod_
 Look back at the line of best fit in our plot—if `x` = 2.5, the `y` point on the line is just below 10. 
 
 
-We can also see how well the data predicts the line, by examining the summary statistics of the model with the `summary()` function:
+**The equation predicts a value of Y, based on what we know about X.**
+
+
+<!-- Correlation coefficient: If the relationship is negative (as X goes up Y goes down), it will be in the range from -1 to 0. -->
+
+This has enormous practical applications.
+
+
+### The Model Summary
+
+We can examine the summary statistics of the model with the `summary()` function:
 
 ```{r summary_sim1_mod}
 
@@ -171,32 +229,38 @@ summary(mod_sim1)
 
 ```
 
-This isn't a statistics class, so we won't go into the details ... 
+This isn't a statistics class, so we won't go into all the details ... but we will seek out some of the key pieces of information that the summary table shows.
 
 (For interpreting the regression model summary, see [_The R Cookbook_, 2nd edition, "11.4 Understanding the Regression Summary"](https://rc2e.com/linearregressionandanova#recipe-id240))
 
-
-
-Can you find the coefficients for the equation?
+First of all: can you find the coefficients for the equation?
 
 ![model coefficients](static/img/mod_sim1_coeff_hilite.png)
 
+These are the same values that we saw earlier, but in a slightly different layout.
 
-**The P value** (the measure of statistical significance) is found in the column marked "Pr(>|t|)".
 
-![The P values](static/img/mod_sim1_coeff_hilite_P.png)
+### R-squared 
 
 The Multiple and Adjusted R-squared statistics tells us how well the line fits the points...this number ranges between 0 (no fit at all) and 1 (where all the X and Y values fall on the line). In this case, it's 0.88, which is a very good fit.
+
+In general we use the "Adjusted R-squared" value, because it accounts for the number of data points and variables in the model.
 
 ![R-squared value](static/img/mod_sim1_R2.png)
 
 
-**The equation predicts a value of Y, based on what we know about X.**
+### Statistical significance
 
 
-<!-- Correlation coefficient: If the relationship is negative (as X goes up Y goes down), it will be in the range from -1 to 0. -->
+**The P value** (the measure of statistical significance) is found in the column marked "Pr(>|t|)".
 
-This has enormous practical applications.
+When dealing with any data, we have to keep in mind that we don't usually have every possible case. One example is survey data, where some respondents may not have answered some (or all) of the questions. Another is warehouse sales data, where the time frame you have chosen will have excluded orders before and after the time period in your data.
+
+This measure of statistical significance "helps quantify whether a result is likely due to chance or to some factor of interest" (Thomas Redman, quoted in [@AmyGallo]). 
+
+> When a finding is significant, it simply means you can feel confident that it's real, not that you just got lucky (or unlucky) in choosing the sample. [@AmyGallo]
+
+![The P values](static/img/mod_sim1_coeff_hilite_P.png)
 
 
 ---
