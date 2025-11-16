@@ -119,6 +119,9 @@ cor(data1)
 ```
 {MASS} package
 
+### 3x3
+
+
 ```{r}
 
 data2 <- MASS::mvrnorm(n = 1000,        # Create random data
@@ -159,7 +162,6 @@ cor(data2)
 
 
 
-## FURTHER EXPERIMENTS
 
 ```{r}
 data2 |> 
@@ -170,6 +172,126 @@ ggplot(aes(X, Y_value)) +
   facet_wrap(~Y_vector)
 
 ```
+
+
+## 5x5
+
+
+```{r}
+
+set.seed(1)
+
+# THIS MATRIX FAILS
+# 'Sigma' is not positive definite
+
+corrmatrix <- matrix(c(1.0, 0.6, -0.2, 0.7, 0.1,
+                                  0.6, 1.0, 0.3, 0.5, -0.4,
+                                  -0.2, 0.3, 1.0, -0.1, 0.8,
+                                  0.7, 0.5, -0.1, 1.0, 0.2,
+                                  0.1, -0.4, 0.8, 0.2, 1.0),
+                                nrow = 5)
+
+#data5 <- MASS::mvrnorm(
+#                  n = 100,        # Create random data
+#                 mu = c(100, 100, 100, 100, 100),  # mean values
+#                 Sigma = corrmatrix
+#                 )
+#
+#head(data5)                       # Head of random data
+#
+#data5 <- as_tibble(data5)
+#
+#cor(data5)
+
+corrmatrix_cp <- crossprod(corrmatrix)
+corrmatrix_cp
+
+tryCatch({
+  chol(corrmatrix_cp)
+  print("Matrix A is positive definite.")
+}, error = function(e) {
+  print("Matrix A is not positive definite.")
+})
+
+```
+
+## Matrix package
+
+This package has the ability to create a positive definite matrix
+
+https://cran.r-project.org/web/packages/Matrix/index.html
+
+
+```{r}
+## Ensure the Matrix package is installed
+#if (!requireNamespace("Matrix", quietly = TRUE)) {
+#  install.packages("Matrix")
+#}
+library(Matrix)
+
+# Example of a matrix that might not be exactly positive definite
+# Replace this with your actual matrix
+my_matrix <- matrix(c(2, 1, 0, 0, 0,
+                      1, 2, 1, 0, 0,
+                      0, 1, 2, 1, 0,
+                      0, 0, 1, 2, 1,
+                      0, 0, 0, 1, 2), nrow=5, byrow=TRUE)
+
+# Compute the nearest positive definite matrix
+nearest_PD_matrix <- nearPD(my_matrix, corr = FALSE)$mat
+
+# Display the result
+print(nearest_PD_matrix)
+
+## REPEAT WITH MY MATRIX
+corrmatrix <- matrix(c( 1.0, 0.9, 0.6, 0.3, 0.0,
+                        0.9, 1.0, 0.3, 0.5, 0.3,
+                        0.6, 0.3, 1.0, 0.6, 0.6,
+                        0.3, 0.5, 0.6, 1.0, 0.8,
+                        0.0, 0.3, 0.6, 0.8, 1.0),
+                                nrow = 5)
+
+
+my_matrix <- corrmatrix
+
+# Compute the nearest positive definite matrix
+nearest_PD_matrix <- nearPD(my_matrix, corr = FALSE)$mat
+
+# Display the result
+print(nearest_PD_matrix)
+```
+
+
+```{r}
+data6 <- MASS::mvrnorm(
+                  n = 1000,        # Create random data
+                 mu = c(100, 100, 100, 100, 100),  # mean values
+                 Sigma = nearest_PD_matrix
+                 )
+
+head(data6)                       # Head of random data
+
+data6 <- as_tibble(data6)
+
+cor(data6)
+
+```
+
+```{r}
+
+data6a <- data6 |> 
+  rename("X" = V1, "R=0.8" = V2, "R=0.4" = V3, "R=0.2" = V4, "R=0.0" = V5) |> 
+  pivot_longer(-X, names_to = "Y_vector", values_to = "Y_value") |> 
+  mutate(Y_vector = as_factor(Y_vector))
+
+data6a |> 
+ggplot(aes(X, Y_value)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~Y_vector)
+
+```
+
 
 
 ## two variables at a time
@@ -304,6 +426,23 @@ sapply(xydf, sd)  ## standard error, you specified 15 and 20
 # 15.35214  20.16483 
 
 ```
+
+
+## package `{randcorr}`
+
+generates
+
+```{r}
+set.seed(10)
+randcorr::randcorr(p = 5)
+
+set.seed(11)
+randcorr::randcorr(p = 5)
+
+
+```
+
+
 
 
 ---
